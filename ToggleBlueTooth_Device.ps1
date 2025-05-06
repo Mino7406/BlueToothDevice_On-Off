@@ -7,6 +7,7 @@ $connected = Get-PnpDevice | Where-Object {
     $_.InstanceId -like "*$mac*" -and $_.Status -eq "OK"
 }
 
+# 연결 상태에 따라 블루투스 장치를 해제 또는 재연결
 if ($connected) {
     Write-Output "Connected: Trying to disconnect..."
     Disable-PnpDevice -InstanceId $connected.InstanceId -Confirm:$false
