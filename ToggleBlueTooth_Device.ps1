@@ -1,6 +1,6 @@
 
 # 지정하고 싶은 기기 MAC 주소 입력란
-$mac = "여기에 입력C"
+$mac = "여기에 입력"
 
 # 현재 연결된 블루투스 장치 목록에서 해당 MAC 주소를 포함한 장치 확인
 $connected = Get-PnpDevice | Where-Object {
